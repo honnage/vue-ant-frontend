@@ -13,14 +13,14 @@ export const asyncRouterMap = [
     name: 'index',
     component: BasicLayout,
     meta: { title: 'menu.home' },
-    redirect: '/dashboard/workplace',
+    redirect: '/dashboard',
     children: [
       // dashboard
       {
-        path: '/Dashboard',
-        name: 'orders',
+        path: '/dashboard',
+        name: 'dashboard',
         // redirect: '/profile/basic',
-        component: () => import('@/views/transaction/TableList'),
+        component: () => import('@/views/dashboard/Analysis'),
         meta: { title: 'แดชบอร์ด', icon: 'dashboard', permission: ['dashboard'] }
       },
 
